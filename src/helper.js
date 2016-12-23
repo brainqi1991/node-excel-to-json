@@ -1,29 +1,26 @@
-var async = require('async');
 var XLSX = require('xlsx');
 var path = require('path');
-var async = require('async');
+
 module.exports = {
-    read: function(fileName) {
-        var dir = __dirname;
-        //var filePath = path.resolve(dir, '../test/Persona_Sheet_New.xlsx');
+    // fileName is the absolute path.
+    read: function (fileName) {
         try {
-            var filePath = path.resolve(dir, fileName); // fileName object with relative path of file
-            return XLSX.readFile(filePath);
+            return XLSX.readFile(fileName);
         } catch (e) {
             return e;
         }
     },
-    convert: function(fileName, callback) {
+    convert: function (fileName, callback) {
         var workbook = this.read(fileName);
-        if(!workbook){
-          return callback(new Error("WorkBook object is Undefiend or NUll"));
+        if (!workbook) {
+            return callback(new Error("WorkBook 不能为空!"));
         }
-        if(workbook instanceof Error) {
-          return callback(new Error("Getting a error while reading the file"));
+        if (workbook instanceof Error) {
+            return callback(new Error("读取文件失败!"));
         }
         var sheet_name_list = workbook.SheetNames;
         var output = {};
-        sheet_name_list.forEach(function(y) {
+        sheet_name_list.forEach(function (y) {
             var worksheet = workbook.Sheets[y];
             var headers = {};
             var data = [];
