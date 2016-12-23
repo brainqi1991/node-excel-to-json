@@ -1,7 +1,7 @@
 {
   "name": "my-xls-to-json",
   "description": "convert a spread sheet into JSON into tabular form",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "src/main.js",
   "author": "Brain Qi",
   "repository": {
