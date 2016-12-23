@@ -1,4 +1,9 @@
 ## Excel2JSON
+Forked From [kashifeqbal/node-excel-to-json](https://github.com/kashifeqbal/node-excel-to-json)
+Fork reason:
+- Deleted unuseful code.
+- Use absolute file path.
+
 Turn any xls or xlsx file into a clean JSON file or Javascript Object. This module is npm module 'XLXS'  Pure-JS cleanroom implementation from official specifications and related documents.
 
 Supported read formats:
@@ -11,7 +16,7 @@ Supported read formats:
 
 ## Install
 
-    $ npm install node-excel-to-json
+    $ npm install my-xls-to-json
 
 ## Usage
 
@@ -32,13 +37,16 @@ Where
 
 Example
 ```javascript
-var excel2Json = require('excel2json');
+var excel2Json = require('my-xls-to-json');
+var path = require('path');
 
-excel2Json('sample.xls', function(err, output) {
-
+var dir = __dirname;
+excel2Json(path.join(dir,'sample.xls'), function(err, output) {
+    // output is the JSON Object.
 });
 
-excel2Json('../test/sample.xls', {
+<!-- Options -->
+excel2Json('/tpm/upload_eaf9af7d6ae2b6e887325aa5e8978c94.xlsx', {
     'convert_all_sheet': false,
     'return_type': 'File',
     'sheetName': 'survey'
