@@ -1,12 +1,12 @@
 {
   "name": "my-xls-to-json",
   "description": "convert a spread sheet into JSON into tabular form",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "src/main.js",
-  "author": "Brain Qi",
+  "author": "Qi Xin <me@qixin.io>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brainqi1991/node-excel-to-json.git"
+    "url": "git+https://github.com/qixin1991/node-excel-to-json.git"
   },
   "keywords": [
     "async",
@@ -33,7 +33,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/brainqi1991/node-excel-to-json/issues"
+    "url": "https://github.com/qixin1991/node-excel-to-json/issues"
   },
-  "homepage": "https://github.com/brainqi1991/node-excel-to-json#readme"
+  "homepage": "https://github.com/qixin1991/node-excel-to-json#readme"
 }
